@@ -8,9 +8,9 @@ public class TextFilterHelper
     public static string ApplyFilters(string input)
     {
         var result = CleanUpContent(input);
-        result = FilterMoreThanThree(result);
-        result = FilterLetters(result);
         result = FilterVowelInMiddle(result);
+        result = FilterMoreThanThreeFilterLetters(result);
+        result = FilterLetters(result);
         return string.Join(" ", result.ToList());
     }
 
